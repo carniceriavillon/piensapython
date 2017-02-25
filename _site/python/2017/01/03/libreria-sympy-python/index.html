@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="description" content="Breve resumen de la librería de matemática simbólica Sympy">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/estilos.css">
+  <link rel="stylesheet" href="/css/css/font-awesome.min.css">
+  <link rel="shortcut icon" type="image/png" href="/imagenes/favicon.png"/>
+  <title>Breve resumen de la librería de matemática simbólica Sympy</title>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+  <style>
+    .social {
+      text-align: center;
+    }
+    h3 {
+      font-weight: normal;
+    }
+    .embed-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      }
+      .embed-container iframe,
+      .embed-container object,
+      .embed-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      blockquote {
+        font-size: 0.8em;
+        font-style: italic;
+        border-left: 1px solid grey;
+        padding-left: 6px;
+      }
+  </style>
+  <style>
+      .map-cont {
+        width: 70%;
+        margin: 0 auto;
+        height: 500px;
+      }
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+</head>
+
+<body>
+  <div class="no-footer">
+    <div class="header-container">
+  <header>
+    <img id="python" src="/imagenes/pylogo2.png" alt="logo" />
+    <h1 class="name" id="coco">Otro Blog de Python y Linux</h1>
+    <hr id="raya">
+    <nav>
+      <ul class="nav navbar-nav">
+        <li class=""><a href="/">Inicio</a></li>
+        
+          
+            <li class=""><a href="/acerca/">Acerca</a></li>
+          
+        
+          
+        
+          
+            <li class="active"><a href="/python/">Python</a></li>
+          
+        
+          
+            <li class=""><a href="/linux/">Linux</a></li>
+          
+        
+      </ul>
+    </nav>
+  </header>
+</div><!-- Header-container -->
+
+    <!--<a href="#menu" class="box-shadow-menu">
+      Menu
+    </a>-->
+    <div class="page">
+      <h1 class="centrar-titulo-blog">Breve resumen de la librería de matemática simbólica Sympy</h1>
+<p>
+    Con Sympy se pueden realizar operaciones matemáticas simbólicas de álgebra, cálculo, algebra lineal y ecuaciones
+    diferenciales entre otras. Sympy viene por defecto en la distribuición de Python de <a href="https://www.continuum.io/">Anaconda</a>
+    Aquí un ejemplo de un cálculo con Sympy: $$  x^{2} - 24 = 0  $$
+    
+    <pre>
+        &gt;&gt;&gt; from sympy import *
+        &gt;&gt;&gt; x, y = symbols('x')
+        &gt;&gt;&gt; solve(x**2 - 24, x)
+        [-2*sqrt(6), 2*sqrt(6)]</pre>
+    La función <i>init_printing()</i> permite visualizar mejor los resultados:
+    <pre>
+        &gt;&gt;&gt; init_printing()
+        &gt;&gt;&gt; solve(x**2 -24, x)</pre>
+    Y el resultado (aquí uso MathJax para una mejor visualización):
+    $$\left [ - 2 \sqrt{6}, \quad 2 \sqrt{6}\right ]$$
+    Otro ejemplo esta vez con integrales:
+    <pre>
+        Integral(cos(x)*exp(x), x)</pre>
+    $$ \int e^{x} \cos{\left (x \right )}\, dx $$
+    Se puede obtener los símbolos en Latex con la función <i>print</i>:
+    <pre>
+        &gt;&gt;&gt; print(latex(acos(0)))
+        \frac{\pi}{2}</pre>
+    Y representado más elegantemente:
+    $$ \frac{\pi}{2} $$
+</p>
+<p>
+    Sympy tiene una página interactiva (<a href="http://live.sympy.org/">Online shell</a>) para practicar los comandos
+    de matemática simbólica.
+</p>
+
+    </div>
+  </div><!-- no-footer -->
+  <footer>
+  <small>
+    &copy; 2017 Leonardo Martinez - Powered by <a href="https://jekyllrb.com/">Jekyll</a>
+  </small>
+</footer>
+
+
+</body>
+</html>

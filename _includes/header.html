@@ -1,0 +1,17 @@
+<div class="header-container">
+  <header>
+    <img id="python" src="{{site.baseurl}}/imagenes/pylogo2.png" alt="logo" />
+    <h1 class="name" id="coco">{{site.title}}</h1>
+    <hr id="raya">
+    <nav>
+      <ul class="nav navbar-nav">
+        <li class="{% if page.permalink == '/' %}active{% endif %}"><a href="/">Inicio</a></li>
+        {% for pagina in site.pages  %}
+          {% if pagina.title and pagina.url != '/' %}
+            <li class="{% if page.url contains pagina.permalink %}active{% endif %}"><a href="{{site.baseurl}}{{pagina.permalink}}">{{ pagina.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+</div><!-- Header-container -->

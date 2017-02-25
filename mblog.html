@@ -1,0 +1,38 @@
+---
+layout: default
+title: Python
+meta_contenido: articulos e informacion acerca de python
+meta_keywords: python
+permalink: /python/
+---
+<h1 class="centrar-titulo-blog">
+  Últimas publicaciones
+</h1>
+<ul class="lista-blog">
+  {% for post in site.categories.python %}
+    <li class="blog-listado">
+      <p class="fecha">
+        {% assign month = post.date | date: "%m" %}
+        {% case month %}
+
+          {% when '01' %} Enero
+          {% when '02' %} Febrero
+          {% when '03' %} Marzo
+          {% when '04' %} Abril
+          {% when '05' %} Mayo
+          {% when '06' %} Junio
+          {% when '07' %} Julio
+          {% when '08' %} Agosto
+          {% when '09' %} Septiembre
+          {% when '10' %} Octubre
+          {% when '11' %} Noviembre
+          {% when '12' %} Diciembre
+
+        {% endcase %}
+        {{ post.date | date: "%-d de %Y" }}
+      </p>
+      <p class="leader"><a href="{{ post.url }}">{{ post.title }}</a></p>
+      <p class="intro">{{post.intro}}</p>
+    </li>
+  {% endfor %}
+</ul>

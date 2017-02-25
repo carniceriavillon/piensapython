@@ -1,0 +1,4 @@
+title: Otro Blog de Python y Linux
+baseurl: ""
+exclude: ['README.md', 'estilos.sass', 'config.codekit', 'CNAME']
+permalink: pretty

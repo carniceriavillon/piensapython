@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="description" content="diccionarios y listas por comprension">
+  <meta name="keywords" content="">
+  <meta name="author" content="Leonardo Martinez">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/estilos.css">
+  <link rel="shortcut icon" type="image/png" href="/imagenes/favicon.png"/>
+  <title>Listas y Diccionarios por Comprensión</title>
+  <style>
+    .social {
+      text-align: center;
+    }
+    h3 {
+      font-weight: normal;
+    }
+    .embed-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      }
+      .embed-container iframe,
+      .embed-container object,
+      .embed-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      blockquote {
+        font-size: 0.8em;
+        font-style: italic;
+        border-left: 1px solid grey;
+        padding-left: 6px;
+      }
+  </style>
+</head>
+
+<body>
+  <div class="no-footer">
+    <div class="header-container">
+  <header>
+    <img id="python" src="/imagenes/pylogo2.png" alt="logo" />
+    <h1 class="name" id="coco">Otro Blog de Python y Linux</h1>
+    <hr id="raya">
+    <nav>
+      <ul class="nav navbar-nav">
+        <li class=""><a href="/">Inicio</a></li>
+        
+          
+            <li class=""><a href="/acerca/">Acerca</a></li>
+          
+        
+          
+        
+          
+            <li class="active"><a href="/python/">Python</a></li>
+          
+        
+          
+            <li class=""><a href="/linux/">Linux</a></li>
+          
+        
+      </ul>
+    </nav>
+  </header>
+</div><!-- Header-container -->
+
+    <!--<a href="#menu" class="box-shadow-menu">
+      Menu
+    </a>-->
+    <div class="page">
+      <h1 class="centrar-titulo-blog">Listas y Diccionarios por Comprensión</h1>
+
+<p>Las listas por comprensión son análogas a los conjuntos por comprensión en teoría de conjuntos. Por ejemplo, A es el conjunto de las vocales (por comprensión) o A = {a,e,i,o,u} (por extensión).</p>
+
+<p>En Python las listas por comprensión se expresan por medio de claúsulas for o if, por ejemplo, la lista A = [0,1,2,3,4] se expresa por comprensión como:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span></code></pre></figure>
+
+<p>La primera parte de la lista es una expresión que se va a evaluar de acuerdo a las cláusulas if o for. Por ejemplo para obtener la lista de los números enteros múltiplos de 3 menores que 20:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">mult_3</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="k">print</span> <span class="n">mult_3</span>
+<span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">18</span><span class="p">]</span></code></pre></figure>
+
+<p>Este tipo de listas se pueden usar para resolver el primer problema del proyecto Euler:</p>
+<hr />
+
+<p><strong>MULTIPLES OF 3 AND 5.</strong></p>
+
+<p><strong>Problem 1.</strong></p>
+
+<p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+Find the sum of all the multiples of 3 or 5 below 1000.</p>
+<hr />
+
+<p>Por ejemplo, los números múltiplos de 5 menores que 20:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span></code></pre></figure>
+
+<p>Los múltiplos de 3 menores que 20:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">18</span><span class="p">]</span></code></pre></figure>
+
+<p>La unión de estas dos listas sería:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">x</span><span class="o">%</span><span class="mi">5</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">18</span><span class="p">]</span></code></pre></figure>
+
+<p>Si usamos la misma notación para números menores que 1000:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">x</span><span class="o">%</span><span class="mi">5</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span></code></pre></figure>
+
+<p>Para hallar la suma podemos usar la función sum:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="nb">sum</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">x</span><span class="o">%</span><span class="mi">5</span><span class="o">==</span><span class="mi">0</span><span class="p">])</span>
+<span class="mi">233168</span></code></pre></figure>
+
+
+    </div>
+  </div><!-- no-footer -->
+  <footer>
+  <small>
+    &copy; 2017 Leonardo Martinez - Powered by <a href="https://jekyllrb.com/">Jekyll</a>
+  </small>
+</footer>
+
+
+</body>
+</html>
