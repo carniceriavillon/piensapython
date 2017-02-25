@@ -18,9 +18,12 @@ permalink: /acerca/
     patrones que originan estas partes y hallar la solución al problema usando 
     herramientas informáticas.
 </p>
-<div class="map-cont">
-    <div id="map"></div>
+
+<div class="foto-left">
+  <img class="img-adaptable" src="{{site.baseurl}}/imagenes/colera_map.png" alt="mapa del colera" />
+  <figcaption>LFCS: Administrador Linux</figcaption>
 </div>
+
 <p>
     Python es una herramienta poderosa y fácil de usar y aprender. Es un lenguaje de programación
     que permite resolver problemas porque tiene una gran cantidad de librerías para atacar cualquier tarea
@@ -64,77 +67,3 @@ permalink: /acerca/
         </span>
     </a>
 <p>
-<script src="{{site.baseurl}}/js/datos.js"></script>
-    <script>
-      var map;
-      function initMap() {
-        var customMapType = new google.maps.StyledMapType([
-            {
-              stylers: [
-                {visibility: 'simplified'},
-              ]
-            },
-            {
-              elementType: 'labels',
-              stylers: [{visibility: 'off'}]
-            }
-         ], {
-           name: 'El cólera de Londres 1854. Los puntos indican las víctimas. Los globos las bombas de agua.'
-        });
-        var customMapTypeId = 'custom_style';
-
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 51.513341, lng: -0.136668}, // London
-          zoom: 16,
-          mapTypeControlOptions: {
-            mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
-          }
-        });
-        /* Initializing variables */
-        var marker;
-        var i;
-        var j;
-        /* Markers for water pumps  */
-        var lista = [{lat: 51.513341, lng: -0.136668}, {lat: 51.513876, lng: -0.139586}, {lat: 51.514906, lng: -0.139671}, {lat: 51.512354, lng: -0.13163}, {lat: 51.512139, lng: -0.133594}, {lat: 51.511542, lng: -0.135919}, {lat: 51.510019, lng: -0.133962}, {lat: 51.511295, lng: -0.138199}]
-
-        for (i = 0; i < lista.length; i++) {
-            var myLatLng = lista[i];
-            marker = new google.maps.Marker({
-              position: myLatLng,
-              map: map,
-              title: lista[i].lng + ", " + lista[i].lat
-            });
-            
-        }
-        /* Markers for victims of cholera */
-        for (j = 0; j < victims.length; j++) {
-            var myLatLng2 = victims[j];
-            marker = new google.maps.Marker({
-              position: myLatLng2,
-              icon: {
-                path: google.maps.SymbolPath.CIRCLE,
-                scale: 1
-              },
-              map: map,
-            });
-            
-        }
-        /* Red circle showing cluster of victims */
-        marker = new google.maps.Marker({
-          position: map.getCenter(),
-          icon: {
-            path: google.maps.SymbolPath.CIRCLE,
-            scale: 40,
-            fillColor: '#f00',
-            fillOpacity: 0.35,
-            strokeWeight: 0
-          },
-          map: map,
-        });
-
-        map.mapTypes.set(customMapTypeId, customMapType);
-        map.setMapTypeId(customMapTypeId);
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCD9-t6t4q4ybHNiyNqZ3h02zmWohy3yj0&callback=initMap"
-    async defer></script>
