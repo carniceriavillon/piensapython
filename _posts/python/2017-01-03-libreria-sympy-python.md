@@ -11,7 +11,7 @@ date: 2017-01-03T10:00:00Z
 <h1 class="centrar-titulo-blog">Breve resumen de la librería de matemática simbólica Sympy</h1>
 <p>
     Con Sympy se pueden realizar operaciones matemáticas simbólicas de álgebra, cálculo, algebra lineal y ecuaciones
-    diferenciales entre otras. Sympy viene por defecto en la distribuición de Python de <a href="https://www.continuum.io/">Anaconda</a>
+    diferenciales entre otras. Sympy viene por defecto en la distribución de Python de <a href="https://www.continuum.io/">Anaconda</a>.
     Aquí un ejemplo de un cálculo con Sympy: $$  x^{2} - 24 = 0  $$
     
     <pre>
