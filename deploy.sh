@@ -2,4 +2,4 @@
 
 jekyll build
 
-/home/leonardo/Documentos/jekyll_site/s3_website push
+s3_website push
