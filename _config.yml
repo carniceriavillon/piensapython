@@ -1,4 +1,4 @@
 title: Otro Blog de Python y Linux
 baseurl: ""
-exclude: ['README.md', 'estilos.sass', 'config.codekit', 'CNAME', 'deploy.sh']
+exclude: ['README.md', 'estilos.sass', 'config.codekit', 'CNAME', 'deploy.sh', 's3_website.yml']
 permalink: pretty
