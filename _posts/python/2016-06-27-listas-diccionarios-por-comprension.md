@@ -25,7 +25,8 @@ print mult_3
 [3, 6, 9, 12, 15, 18]
 {% endhighlight %}
 
-Este tipo de listas se pueden usar para resolver el primer problema del proyecto Euler:
+Este tipo de listas se pueden usar para resolver el primer problema del 
+proyecto Euler(<a href="https://projecteuler.net/" target="_blank">Project Euler</a>):
 <hr>
 **MULTIPLES OF 3 AND 5.**
 

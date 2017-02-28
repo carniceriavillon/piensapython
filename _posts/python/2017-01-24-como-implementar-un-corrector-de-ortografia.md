@@ -11,11 +11,11 @@ date: 2017-01-24T11:00:00Z
 <h1 class="centrar-titulo-blog">Cómo implementar un corrector de ortografía</h1>
 <p>
     En el año 2007 Peter Norvig, director de investigaciones en Google, escribió un artículo en su blog 
-    llamado <a href="http://norvig.com/spell-correct.html">"How to Write a 
+    llamado <a href="http://norvig.com/spell-correct.html" target="_blank">"How to Write a 
     Spelling Corrector"</a>. He tratado de adaptarlo en español usando el corpus
     de las palabras y sus frecuencias en español extraído de la página de la Real Academia de la 
     Lengua. El corpus de referencia del español actual (CREA) se puede consultar 
-    <a href="http://corpus.rae.es/lfrecuencias.html">aquí</a>.
+    <a href="http://corpus.rae.es/lfrecuencias.html" target="_blank">aquí</a>.
 </p>
 <p>
     La corrección de ortografía es un área de investigación del procesamiento

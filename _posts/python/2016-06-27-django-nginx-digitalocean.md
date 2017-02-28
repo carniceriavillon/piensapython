@@ -9,14 +9,18 @@ date: 2016-06-29T10:20:00Z
 ---
 <h1 class="centrar-titulo-blog">Montando un proyecto django en Ubuntu con nginx</h1>
 <div class="foto-left">
-  <a href="https://www.digitalocean.com"><img id="oceano" src="{{site.baseurl}}/imagenes/oceano_page2.png" alt="Digitalocean" /></a>
+  <a href="https://www.digitalocean.com" target="_blank"><img id="oceano" src="{{site.baseurl}}/imagenes/oceano_page2.png" alt="Digitalocean" /></a>
   <figcaption>Digital Ocean</figcaption>
 </div>
 <p>
   Digitalocean es un proveedor de sevicios en la nube para desarrolladores de
   software. Un aspecto positivo de Digitalocean es que tiene una excellente
   documentación y tutoriales desde cómo iniciar un servidor hasta cómo instalar
-  todo tipo de software. Las otras opciones para despliegue de aplicaciones son <a href="https://www.linode.com">Linode</a>, <a href="https://aws.amazon.com">AWS</a> y <a href="https://www.heroku.com">Heroku</a>, entre otras. El presente artículo está basado precisamente en un tutorial de Digitalocean que se puede leer <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-14-04">aquí</a>.
+  todo tipo de software. Las otras opciones para despliegue de aplicaciones son 
+  <a href="https://www.linode.com" target="_blank">Linode</a>, <a href="https://aws.amazon.com" target="_blank">AWS</a> 
+  <a href="https://www.heroku.com" target="_blank">Heroku</a>, entre otras. El presente artículo está basado
+  precisamente en un tutorial de Digitalocean que se puede leer 
+  <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-14-04" target="_blank">aquí</a>.
 </p>
 
 <h3 class="subtitulo-blog">Crear droplet e implementar las claves SSH</h3>
@@ -26,7 +30,7 @@ date: 2016-06-29T10:20:00Z
   Fedora, Debian FreeBSD y CoreOS que cuestan mínimo 5 dólares mensuales.Toma un minuto crear un droplet. Digitalocean envia un correo con la dirección IP y una clave para acceder por primera vez:
 {% highlight nano %}
 Droplet Name: ubuntu-512mb-nyc3-01
-IP Address: 159.34.67.**
+IP Address: 159.34.67.123
 Username: root
 Password: 80089747ca9ee0c7
 {% endhighlight %}
@@ -42,18 +46,18 @@ $ ssh-keygen -t rsa
   Se escoge donde guardarlo y luego se copia el archivo pub y se pega en el campo
   ssh key de Digitalocean. O también, y mejor, se puede usar el comando ssh-copy-id:
 {% highlight vim %}
-$ ssh-copy-id root@159.34.67.**
+$ ssh-copy-id root@159.34.67.123
 {% endhighlight %}
   Luego pide la clave que es la que se había enviado por correo.
 {% highlight nano %}
-  $ ssh-copy-id root@159.34.67.** (usar la dirección IP asignada)
+  $ ssh-copy-id root@159.34.67.123 (usar la dirección IP asignada)
   /usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
   /usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
   root@159.34.67.75's password:
 
   Number of key(s) added: 1
 
-  Now try logging into the machine, with:   "ssh 'root@159.34.67.**'"
+  Now try logging into the machine, with:   "ssh 'root@159.34.67.123'"
   and check to make sure that only the key(s) you wanted were added.
 {% endhighlight %}
 </p>
@@ -61,7 +65,7 @@ $ ssh-copy-id root@159.34.67.**
 <p>
   Se usa ssh y ya no es necesario ingresar la clave:
 {% highlight vim %}
-$ ssh root@159.34.67.**
+$ ssh root@159.34.67.123
 {% endhighlight %}
 </p>
 <p>
@@ -74,8 +78,8 @@ $ ssh root@159.34.67.**
 A continuación hay que salir del servidor y volver a ingresar como el nuevo usuario:
 {% highlight nano %}
   # exit
-  $ ssh-copy-id usuario@159.34.67.**
-  $ ssh usuario@159.34.67.**
+  $ ssh-copy-id usuario@159.34.67.123
+  $ ssh usuario@159.34.67.123
 {% endhighlight %}
 </p>
 <h3 class="subtitulo-blog">Instalar nginx, postgres y demás dependencias</h3>
@@ -181,5 +185,5 @@ $ sudo nginx -t
 Iniciamos nginx y ya podemos ir a la dirección IP a revisar el sitio django.
 {% highlight vim %}
 $ sudo service nginx start
-$ curl 159.34.67.**
+$ curl 159.34.67.123
 {% endhighlight %}
