@@ -1,0 +1,6 @@
+<aside class="aside">
+    <p>Últimas publicaciones</p>
+    {% for post in site.posts %}
+        <p class="p-aside"><a href="{{post.url}}">{{post.title}}</a></p>
+    {% endfor %}
+</aside>

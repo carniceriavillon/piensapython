@@ -10,17 +10,38 @@ permalink: /acerca/
 <h3>Pensamiento Computacional</h3>
 <p>
     El pensamiento computacional es la forma moderna de resolver problemas usando
-    el poder de cómputo. El pensamiento computacional siempre ha existido, la diferencia
-    es que ahora los computadores abarcan casi todas las áreas de la actividad
-    humana. Un claro ejemplo de pensamiento computacional fue el descubrimiento por parte de
-    John Snow de un foco de cólera en la ciudad de Londres en 1854.
-    Implica formular y descomponer un problema en partes manejables, hallar 
+    el poder de cómputo. Implica formular y descomponer un problema en partes manejables, hallar 
     patrones que originan estas partes y hallar la solución al problema usando 
-    herramientas informáticas.
+    herramientas informáticas. El pensamiento computacional siempre ha existido, la diferencia
+    es que ahora los computadores abarcan casi todas las áreas de la actividad
+    humana. El profesor Eric Grimson del MIT quien enseña python en la plataforma Edx 
+    (<a href="https://www.edx.org/course/introduction-computational-thinking-data-mitx-6-00-2x-5" target="_blank">Introduction to 
+    Computational Thinking and Data Science</a>) define así el pensamiento Computational:
+    <blockquote>
+        <i class="fa fa-quote-left fa-2x fa-pull-left fa-border" aria-hidden="true"></i>
+        El pensamiento computacional es un tipo particular de pensamiento riguroso que tiene valor intelectual
+        similar al pensamiento matemático o lógico. Combina un razonamiento estructurado con una exploración creativa
+        de caminos que llevan a un resultado. Es diferente al pensamiento matemático en el énfasis puesto al 
+        manejar la complejidad, los recursos computacionales limitados y la efectividad al modelar los sistemas
+        físicos y sociales.
+    </blockquote>
 </p>
-<div class="map-cont">
-    <div id="map"></div>
+<p>
+    Un claro ejemplo de pensamiento computacional y análisis de datos fue el descubrimiento por parte del
+    doctor John Snow de un foco de cólera en la ciudad de Londres en 1854. En esa época se creía que la causa del
+    cólera era el "miasma" o aire contaminado por materia orgánica y nadie sospechaba del agua que se consumía.
+    Así que Snow dibujó un mapa de los casos de cólera en Londres y se dio cuenta que la mayoría de los casos estaban
+    alredeor de la bomba de agua de la calle Broadwick. Resultó que esa fuente de agua estaba siendo contaminada por aguas
+    alcantarilla. Snow logró convencer a las autoridades para que clausuraran esa fuente y el brote en esa zona desapareció.
+    Los datos originales de John Snow pueden encontrarse 
+    <a href="http://blog.rtwilson.com/john-snows-cholera-data-in-more-formats/" target="_blank">en este enlace</a>.
+</p>
+
+<div class="foto-center">
+  <img class="img-adaptable" src="{{site.baseurl}}/imagenes/colera_map.png" alt="mapa del colera" />
+  <figcaption>Brote de cólera en Londres en 1854</figcaption>
 </div>
+
 <p>
     Python es una herramienta poderosa y fácil de usar y aprender. Es un lenguaje de programación
     que permite resolver problemas porque tiene una gran cantidad de librerías para atacar cualquier tarea
@@ -57,84 +78,10 @@ permalink: /acerca/
 </p>
 
 <p class="social">
-    <a href="https://twitter.com/leomartinez2015">
+    <a href="https://twitter.com/leomartinez2015" target="_blank">
         <span class="fa-stack fa-lg">
             <i class="fa fa-square-o fa-stack-2x"></i>
             <i class="fa fa-twitter fa-stack-1x"></i>
         </span>
     </a>
 <p>
-<script src="{{site.baseurl}}/js/datos.js"></script>
-    <script>
-      var map;
-      function initMap() {
-        var customMapType = new google.maps.StyledMapType([
-            {
-              stylers: [
-                {visibility: 'simplified'},
-              ]
-            },
-            {
-              elementType: 'labels',
-              stylers: [{visibility: 'off'}]
-            }
-         ], {
-           name: 'El cólera de Londres 1854. Los puntos indican las víctimas. Los globos las bombas de agua.'
-        });
-        var customMapTypeId = 'custom_style';
-
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 51.513341, lng: -0.136668}, // London
-          zoom: 16,
-          mapTypeControlOptions: {
-            mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
-          }
-        });
-        /* Initializing variables */
-        var marker;
-        var i;
-        var j;
-        /* Markers for water pumps  */
-        var lista = [{lat: 51.513341, lng: -0.136668}, {lat: 51.513876, lng: -0.139586}, {lat: 51.514906, lng: -0.139671}, {lat: 51.512354, lng: -0.13163}, {lat: 51.512139, lng: -0.133594}, {lat: 51.511542, lng: -0.135919}, {lat: 51.510019, lng: -0.133962}, {lat: 51.511295, lng: -0.138199}]
-
-        for (i = 0; i < lista.length; i++) {
-            var myLatLng = lista[i];
-            marker = new google.maps.Marker({
-              position: myLatLng,
-              map: map,
-              title: lista[i].lng + ", " + lista[i].lat
-            });
-            
-        }
-        /* Markers for victims of cholera */
-        for (j = 0; j < victims.length; j++) {
-            var myLatLng2 = victims[j];
-            marker = new google.maps.Marker({
-              position: myLatLng2,
-              icon: {
-                path: google.maps.SymbolPath.CIRCLE,
-                scale: 1
-              },
-              map: map,
-            });
-            
-        }
-        /* Red circle showing cluster of victims */
-        marker = new google.maps.Marker({
-          position: map.getCenter(),
-          icon: {
-            path: google.maps.SymbolPath.CIRCLE,
-            scale: 40,
-            fillColor: '#f00',
-            fillOpacity: 0.35,
-            strokeWeight: 0
-          },
-          map: map,
-        });
-
-        map.mapTypes.set(customMapTypeId, customMapType);
-        map.setMapTypeId(customMapTypeId);
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCD9-t6t4q4ybHNiyNqZ3h02zmWohy3yj0&callback=initMap"
-    async defer></script>
