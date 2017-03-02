@@ -56,6 +56,6 @@ El profesor Jeffrey D. Ullman es el encargado del curso de Stanford Lagunita y e
 regulares, los autómatas determinísticos y no determinísticos, la máquina de Turing y los problemas intratables (que consumen 
 mucho tiempo).
 <div class="foto-center">
-  <a href="https://lagunita.stanford.edu/courses/course-v1:ComputerScience+Automata+SelfPaced/about" target="_blank"><img class="img-adaptable" src="{{site.baseurl}}/imagenes/stanfordlagunita.png" alt="stanford lagunita" /></a>
+  <a href="https://lagunita.stanford.edu/courses/course-v1:ComputerScience+Automata+SelfPaced/about" target="_blank"><img class="img-adaptable" src="{{site.baseurl}}/imagenes/lagunita2.png" alt="stanford lagunita" /></a>
   <figcaption>Cursos de Stanford Lagunita</figcaption>
 </div>
