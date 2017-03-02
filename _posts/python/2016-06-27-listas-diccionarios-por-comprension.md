@@ -17,7 +17,8 @@ En Python las listas por comprensión se expresan por medio de claúsulas for o 
 A = [x for x in range(5)]
 {% endhighlight %}
 
-La primera parte de la lista es una expresión que se va a evaluar de acuerdo a las cláusulas if o for. Por ejemplo para obtener la lista de los números enteros múltiplos de 3 menores que 20:
+La primera parte de la lista es una expresión que se va a evaluar de acuerdo a las cláusulas if o for. 
+Por ejemplo para obtener la lista de los números enteros múltiplos de 3 menores que 20:
 
 {% highlight python %}
 mult_3 = [x for x in range(1,20) if x%3 == 0]
@@ -68,4 +69,28 @@ Para hallar la suma podemos usar la función sum:
 {% highlight python %}
 sum([x for x in range(1,1000) if x%3 == 0 or x%5==0])
 233168
+{% endhighlight %}
+
+Para crear **diccionarios por comprensión** es muy conveniente usar la función **zip()** que devuelve tuplas consistentes
+del primer elemento de una lista con el primer elemento de la segunda lista, el segundo elemento de una con el
+segundo elemento de la otra y así sucesivamente:
+{% highlight python %}
+valores = [1,2,3]
+claves = ['a', 'b', 'c']
+zip(claves, valores)
+[('a', 1), ('b', 2), ('c', 3)]
+{a:b for a,b in zip(claves, valores)}
+{'a': 1, 'b': 2, 'c': 3}
+{% endhighlight %}
+
+Es posible crear **listas o diccionarios anidados** como en este caso:
+{% highlight python %}
+datos = [['Luisa', 23, 'Brazil'], ['Tom', 34, 'USA'], ['Jean', 29, 'Francia']]
+campos = ['nombre', 'edad', 'origen']
+[{clave: valor for clave, valor in zip(campos, lista)} for lista in datos]
+[
+    {'edad': 23, 'nombre': 'Luisa', 'origen': 'Brazil'},
+    {'edad': 34, 'nombre': 'Tom', 'origen': 'USA'},
+    {'edad': 29, 'nombre': 'Jean', 'origen': 'Francia'}
+]
 {% endhighlight %}

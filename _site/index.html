@@ -4,12 +4,20 @@
   <meta charset="utf-8">
   <meta name="description" content="Blog acerca de python, ciencia de datos, django, javascript, mongodb y linux">
   <meta name="keywords" content="python,linux,blog">
-  <meta name="author" content="Leonardo Martinez">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/estilos.css">
+  <link rel="stylesheet" href="/css/css/font-awesome.min.css">
   <link rel="shortcut icon" type="image/png" href="/imagenes/favicon.png"/>
   <title>Inicio</title>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
   <style>
     .social {
       text-align: center;
@@ -40,6 +48,24 @@
         padding-left: 6px;
       }
   </style>
+  <style>
+      .map-cont {
+        width: 70%;
+        margin: 0 auto;
+        height: 500px;
+      }
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
 </head>
 
 <body>
@@ -91,6 +117,7 @@
   abierto. En contraste, para usar Matlab hay que comprar una licencia costosa y hay quienes piensan que 
   Matlab no sirve como opina <a href="https://imgur.com/5zE08DX" target="_blank">un ex-empleado de Google</a>:
   <blockquote cite="https://imgur.com/5zE08DX">
+    <i class="fa fa-quote-left fa-2x fa-pull-left fa-border" aria-hidden="true"></i>
     Matlab is a broken, outdated language that is propietary and has extortionate
     pricing policies for licenses outside education. The language has been completely
     superseded by modern languages in the numerical computing space, such as the
