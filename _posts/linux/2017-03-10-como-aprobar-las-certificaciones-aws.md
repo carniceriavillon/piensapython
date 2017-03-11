@@ -1,6 +1,6 @@
 ---
 layout: default
-intro: 'Artículo acerca de las cerificaciones AWS'
+intro: 'Artículo acerca de las certificaciones Amazon AWS'
 title: Cómo aprobar las certificaciones AWS
 category: linux
 meta_contenido: certificaciones aws
@@ -9,7 +9,7 @@ date: 2017-03-10T12:05:00Z
 
 <h1 class="centrar-titulo-blog">Cómo aprobar las certificaciones AWS</h1>
 
-<p><em>Traducción del artículo de Adrian Cantrill (<a href="https://twitter.com/adriancantrill">@adriancantrill</a>) publicado originalmente el 27 de marzo de 2016 como “<strong>How to pass AWS certifications</strong>”
+<p style="text-align: left;"><em>Traducción del artículo de Adrian Cantrill (<a href="https://twitter.com/adriancantrill">@adriancantrill</a>) publicado originalmente el 27 de marzo de 2016 como “<strong>How to pass AWS certifications</strong>”
 en <a href="http://cantrill.io/certification/aws/2016/03/27/how-to-pass-AWS-certifications.html">http://cantrill.io/certification/aws/2016/03/27/how-to-pass-AWS-certifications.html</a></em></p>
 
 Mar 27, 2016 • Adrian Cantrill
